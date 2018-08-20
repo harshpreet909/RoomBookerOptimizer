@@ -1,0 +1,35 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" displayBlock="true" controllerName="opensap.myapp.controller.App">
+	<App>
+		<pages>
+			<Page title="Room Optimizer" showNavButton="true" titleLevel="H4">
+				<content>
+					<IconTabBar id="idTopLevelIconTabBar" selectedKey="db" class="sapUiResponsiveContentPadding" upperCase="true">
+						<items>
+							<IconTabFilter text="RoomBooker" key="db">
+								<content>
+									<List id="roomList" items="{ path : '/ROOMDBSet', sorter : { path : 'Vacancy', descending: true , group : true } }">
+										<headerToolbar>
+											<Toolbar>
+												<Title text="{i18n>roomListTitle}"/>
+												<ToolbarSpacer/>
+												<SearchField width="20%" search="onFilterRoom"/>
+											</Toolbar>
+										</headerToolbar>
+										<items>
+											<ObjectListItem title="{Id}" intro="Building: {Building} Floor: {Floor}" number="{Vacancy}" numberState="{= ${Vacancy} === 'OCCUPIED' ? 'Error' : 'Success'}" numberUnit="Capacity:{Capacity}" activeIcon="sap-icon://meeting-room" highlight="Information" icon="sap-icon://meeting-room" selected="true"/>
+										</items>
+									</List>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Info" key="db">
+							<content>
+							    <FeedListItem xmlns="sap.m" icon="sap-icon://personnel-view" sender="Harshpreet Singh" text="RoomCheck" info="Waiting for Approval" timestamp="Dec 02, 2012" id="item1"/>
+							</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

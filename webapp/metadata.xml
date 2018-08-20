@@ -1,0 +1,15 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZROOMDB_SRV_01" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="ROOMDB" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="roomid" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Floor" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="FLOOR" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Building" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="BUILDING" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Capacity" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="CAPACITY" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Vacancy" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="VACANCY" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZROOMDB_SRV_01_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ROOMDBSet" EntityType="ZROOMDB_SRV_01.ROOMDB" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZROOMDB_SRV_01/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZROOMDB_SRV_01/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
